@@ -130,6 +130,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <header>
         <?php
         NavBar::begin([
+            'brandImage' => Yii::$app->homeUrl . '../../web/images/NT.png',
             // 'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [

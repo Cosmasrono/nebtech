@@ -31,6 +31,8 @@ class OrderForm extends ActiveRecord
     public function getServicesList()
     {
         return [
+            // web development
+            'Web Development' => 'Web Development',
             'IT Consulting' => 'IT Consulting',
             'Software Development' => 'Software Development',
             'Cloud Services' => 'Cloud Services',
