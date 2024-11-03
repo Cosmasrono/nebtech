@@ -1,0 +1,4 @@
+[build]
+  base = "/"
+  publish = "web"  # Yii's web directory
+  command = "# your build command here if needed" 
