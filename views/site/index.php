@@ -270,177 +270,112 @@ $this->title = 'Welcome to ' . Yii::$app->name;
     flex-direction: column;
     width: 100%;
 }
+
+/* Add this to the top of your existing styles */
+body {
+    padding-top: 60px; /* Adjust this value as needed */
+}
+
+.cylinder-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding-top: 60px; /* Add this line */
+}
     </style>
 </head>
 <body>
 
-<div id="heroCarousel" class="carousel slide hero-section" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-inner">
-        <!-- Carousel Item 1 -->
-        <div class="carousel-item active">
-            <img src="https://www.fgee.co.ke/wp-content/uploads/2024/08/Untitled-design-23.png"
-                 class="d-block w-100 carousel-image" alt="Service 1">
-            <div class="carousel-caption d-md-block">
-                <div class="caption-background">
-                    <h2 class="carousel-title">Cutting-edge IT Solutions</h2>
-                    <p class="carousel-text">Transforming businesses with technology.</p>
-                    <a href="#services" class="btn btn-primary btn-md scroll-link">Explore Our Services</a>
-                </div>
-            </div>
+<!-- Replace the existing carousel with this new structure -->
+<div id="imageCylinder" class="cylinder-container">
+    <div class="cylinder">
+        <div class="cylinder-item" style="--i:1;">
+            <img src="https://www.fgee.co.ke/wp-content/uploads/2024/08/Untitled-design-23.png" alt="Web Development">
+            <div class="service-name">App Development</div>
         </div>
-        <!-- Carousel Item 2 -->
-        <div class="carousel-item">
-            <img src="https://miro.medium.com/v2/resize:fit:1200/0*M4bxiCIjcTK-2Xr6.jpeg" class="d-block w-100 carousel-image" alt="Service 2">
-            <div class="carousel-caption d-md-block">
-                <div class="caption-background">
-                    <h2 class="carousel-title">Innovation and Excellence</h2>
-                    <p class="carousel-text">Delivering exceptional value to our clients.</p>
-                    <a href="#services" class="btn btn-light btn-md scroll-link">Explore Our Services</a>
-                </div>
-            </div>
+        <div class="cylinder-item" style="--i:2;">
+            <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" alt="Mobile App Development">
+            <div class="service-name">Web Development</div>
         </div>
-        <!-- Carousel Item 3 -->
-        <div class="carousel-item">
-            <img src="https://cdn.corporatefinanceinstitute.com/assets/cloud-services-1024x401.jpeg" class="d-block w-100 carousel-image" alt="Service 3">
-            <div class="carousel-caption d-md-block">
-                <div class="caption-background">
-                    <h2 class="carousel-title">Empowering Your Business</h2>
-                    <p class="carousel-text">Customized solutions tailored to your needs.</p>
-                    <a href="#services" class="btn btn-light btn-md scroll-link">Explore Our Services</a>
-                </div>
-            </div>
+        <div class="cylinder-item" style="--i:3;">
+            <img src="https://cdn.corporatefinanceinstitute.com/assets/cloud-services-1024x401.jpeg" alt="Cloud Services">
+            <div class="service-name">Cloud Services</div>
         </div>
-        <!-- Carousel Item 4 -->
-        <div class="carousel-item">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_the_Importance_of_Technology.jpg" class="d-block w-100 carousel-image" alt="Service 4">
-            <div class="carousel-caption d-md-block">
-                <div class="caption-background">
-                    <h2 class="carousel-title">Advanced Technology Solutions</h2>
-                    <p class="carousel-text">Staying ahead in the digital era.</p>
-                    <a href="#services" class="btn btn-light btn-md scroll-link">Explore Our Services</a>
-                </div>
-            </div>
+        <div class="cylinder-item" style="--i:4;">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_the_Importance_of_Technology.jpg" alt="AI & Machine Learning">
+            <div class="service-name">AI & Machine Learning</div>
         </div>
-        <!-- Carousel Item 5 -->
-        <div class="carousel-item">
-            <img src="https://www.northeastern.edu/graduate/blog/wp-content/uploads/2019/09/iStock-1150384596-2.jpg" class="d-block w-100 carousel-image" alt="Service 5">
-            <div class="carousel-caption d-md-block">
-                <div class="caption-background">
-                    <h2 class="carousel-title">Secure and Scalable Infrastructure</h2>
-                    <p class="carousel-text">Building robust foundations for your growth.</p>
-                    <a href="#services" class="btn btn-light btn-md scroll-link">Explore Our Services</a>
-                </div>
-            </div>
+        <div class="cylinder-item" style="--i:5;">
+            <img src="https://www.northeastern.edu/graduate/blog/wp-content/uploads/2019/09/iStock-1150384596-2.jpg" alt="Cybersecurity">
+            <div class="service-name">Cybersecurity</div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
 
 <style>
-    .hero-section {
-        margin-top: 60px; /* Adds space above the carousel */
-        margin-bottom: 30px;
-        padding-top: 20px; /* Adds internal space at the top of the carousel */
-    }
-
-    .carousel-inner {
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .carousel-image {
+    .cylinder-container {
+        perspective: 1000px;
         width: 100%;
-        height: 500px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        padding-top: 60px; /* Add this line */
+    }
+
+    .cylinder {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: rotate 20s linear infinite;
+    }
+
+    .cylinder-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform: rotateY(calc(var(--i) * 72deg)) translateZ(250px);
+    }
+
+    .cylinder-item img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: center;
-    }
-
-    .carousel-caption {
-        background: rgba(0, 0, 0, 0.6);
         border-radius: 10px;
-        padding: 20px;
-        bottom: 20px;
-        left: 10%;
-        right: 10%;
     }
 
-    .caption-background {
-        padding: 15px;
+    .service-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
-    .carousel-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #fff;
-    }
-
-    .carousel-text {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: #f8f9fa;
-    }
-
-    .btn-md {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-        width: 5%;
-    }
-
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 50%;
-        padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-        .hero-section {
-            margin-top: 40px; /* Slightly less margin on smaller screens */
-            padding-top: 15px;
+    @keyframes rotate {
+        0% {
+            transform: rotateY(0);
         }
-
-        .carousel-image {
-            height: 300px;
-        }
-
-        .carousel-title {
-            font-size: 1.8rem;
-        }
-
-        .carousel-text {
-            font-size: 1rem;
-        }
-
-        .btn-md {
-            font-size: 0.9rem;
-            padding: 0.4rem 0.8rem;
+        100% {
+            transform: rotateY(360deg);
         }
     }
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var myCarousel = document.querySelector('#heroCarousel')
-    var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 5000,
-        wrap: true
-    })
-});
-</script>
-</body>
-</html>
+<!-- Remove or comment out the existing carousel JavaScript -->
 
 <!-- About Us Section -->
 <div id="about" class="section">
@@ -546,27 +481,75 @@ document.addEventListener('DOMContentLoaded', function() {
         <h2 class="section-title text-center">Contact Us</h2>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <?php $form = ActiveForm::begin([
-                    'id' => 'contact-form',
-                    'action' => ['site/submit-order'], // Custom action for form submission
-                ]); ?>
+                <div class="floating-card">
+                    <?php $form = ActiveForm::begin([
+                        'id' => 'contact-form',
+                        'action' => ['site/submit-order'], // Custom action for form submission
+                    ]); ?>
 
-                <?= $form->field($orderForm, 'name')->textInput(['autofocus' => true]) ?>
-                <?= $form->field($orderForm, 'company_name') ?>
-                <?= $form->field($orderForm, 'company_email') ?>
-                <?= $form->field($orderForm, 'phone_number') ?>
-                <?= $form->field($orderForm, 'services')->checkboxList($orderForm->getServicesList()) ?>
-                <?= $form->field($orderForm, 'message')->textarea(['rows' => 6]) ?>
+                    <?= $form->field($orderForm, 'name')->textInput(['autofocus' => true]) ?>
+                    <?= $form->field($orderForm, 'company_name') ?>
+                    <?= $form->field($orderForm, 'company_email') ?>
+                    <?= $form->field($orderForm, 'phone_number') ?>
+                    <?= $form->field($orderForm, 'services')->checkboxList($orderForm->getServicesList()) ?>
+                    <?= $form->field($orderForm, 'message')->textarea(['rows' => 6]) ?>
 
-                <div class="form-group text-center">
-                    <?= Html::submitButton('Submit Request', ['class' => 'btn btn-primary btn-lg', 'name' => 'contact-button']) ?>
+                    <div class="form-group text-center">
+                        <?= Html::submitButton('Submit Request', ['class' => 'btn btn-primary btn-lg', 'name' => 'contact-button']) ?>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
                 </div>
-
-                <?php ActiveForm::end(); ?>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    #contact {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+    }
+
+    .floating-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .floating-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: #ffffff;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -590,6 +573,14 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(checkFade, 100); // Small delay to ensure proper initial state
 });
 </script>
+
+
+
+
+
+
+
+
 
 
 

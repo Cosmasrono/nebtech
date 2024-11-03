@@ -8,4 +8,13 @@ require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 $config = require __DIR__ . '/../config/web.php';
 
+// Add this condition to load Gii only in development environment
+if (YII_ENV_DEV) {
+    // configuration adjustments for 'dev' environment
+    $config['bootstrap'][] = 'gii';
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+    ];
+}
+
 (new yii\web\Application($config))->run();

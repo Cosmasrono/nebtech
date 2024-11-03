@@ -170,18 +170,37 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
 </div>
 
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <p>&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-            </div>
             <div class="col-md-6 text-md-end">
-                <p><?= Yii::powered() ?></p>
+                <p class="footer-text">@Nebtech</p>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f9fa; /* Light background */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .footer-text {
+        color: #007bff; /* Blue text color */
+        font-weight: bold;
+        margin: 0;
+    }
+
+    /* Add some padding to the body to prevent content from being hidden behind the footer */
+    body {
+        padding-bottom: 50px; /* Adjust this value based on your footer's height */
+    }
+</style>
 
 <?php $this->endBody() ?>
 
@@ -197,7 +216,18 @@ function setTrackReturnUrl(event) {
 JS;
 $this->registerJs($js);
 ?>
+<script>
 
+$(document).ready(function() {
+    $('.scroll-link').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
+    });
+});
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>
